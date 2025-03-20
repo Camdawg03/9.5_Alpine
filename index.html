@@ -12,6 +12,14 @@
 <h1 x-text="name"></h1>
 <button @click="name = name">Generate a name</button>
 </div>
-
+<div x-data="{wartortleText: $fetchjson('https://pokeapi.co/api/v2/pokemon/wartortle', jsonItem='abilities')}"> 
+    <template x-for="x in wartortleText">
+      <h2 x-text="x.ability.name"></h2>
+    </template>
+  </div>
+  
+  <div x-data="{wartortleText: $fetchjson('https://pokeapi.co/api/v2/pokemon/wartortle', jsonItem='species')}"> 
+    <h2 x-text="wartortleText.name"></h2>
+  </div>
 </body>
 </html>
