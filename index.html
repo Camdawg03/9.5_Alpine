@@ -10,7 +10,7 @@
 <body>
 <div x-data="rando">
 <h1 x-text="name"></h1>
-<button @click="name = name">Generate a name</button>
+<button @click="name = name">Generate a name!</button>
 </div>
 <div x-data="{wartortleText: $fetchjson('https://pokeapi.co/api/v2/pokemon/wartortle', jsonItem='abilities')}"> 
     <template x-for="x in wartortleText">
